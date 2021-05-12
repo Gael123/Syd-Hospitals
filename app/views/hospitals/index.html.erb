@@ -1,4 +1,30 @@
 <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="pk.eyJ1IjoiZ2FlbGplcm9wIiwiYSI6ImNrb2k2OWJ1ZjB1ODgycHBuMzlzc2Z4ZDcifQ.BgdkXfCwq1F4wooVhN2uSQ"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
+
+       <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Banner url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hospitals.each do |hospital| %>
+      <tr>
+        <td><%= hospital.name %></td>
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
