@@ -1,6 +1,9 @@
 class Hospital < ApplicationRecord
-  has_many :patients, dependent: :destroy
-  has_many :waiting_lists, dependent: :destroy
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+  has_many :patients
+  has_many :waiting_lists
   has_many  :diseases
   validates_associated :waiting_lists
   validates :name , presence: true

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :patients
+  # devise_for :patients
         root to: "hospitals#index"
 
 
