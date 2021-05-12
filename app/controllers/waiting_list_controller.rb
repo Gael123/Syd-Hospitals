@@ -1,0 +1,2 @@
+class WaitingListController < ApplicationController
+end
