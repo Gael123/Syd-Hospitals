@@ -5,7 +5,7 @@ class DiseasesController < ApplicationController
  end
 
 def disease_params
- params.require(:disease).permit(:name,:id)
+ params.require(:disease).permit(:name,:disease_id)
  end
 
 
